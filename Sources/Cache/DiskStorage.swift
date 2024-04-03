@@ -47,7 +47,7 @@ public enum DiskStorage {
 
         let metaChangingQueue: DispatchQueue
 
-        private(set) public var maybeCached : Set<String>?
+        private(set) public @Published var maybeCached : Set<String>?
         let maybeCachedCheckingQueue = DispatchQueue(label: "com.onevcat.Kingfisher.maybeCachedCheckingQueue")
 
         // `false` if the storage initialized with an error. This prevents unexpected forcibly crash when creating
